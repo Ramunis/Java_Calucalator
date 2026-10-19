@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javacalculator.HelloController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="26.0" layoutY="14.0" prefHeight="27.0" prefWidth="0.0" style="&#10;" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false" fx:id="welcomeText">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+        <TextField layoutX="26.0" layoutY="17.0" prefHeight="25.0" prefWidth="131.0" fx:id="tex"/>
+        <Button layoutX="26.0" layoutY="83.0" mnemonicParsing="false" text="7" textOverrun="WORD_ELLIPSIS" onAction="#onCommand7Click">
+          <effect>
+            <Blend />
+          </effect>
+        </Button>
+        <Button layoutX="60.0" layoutY="83.0" mnemonicParsing="false" text="8" onAction="#onCommand8Click"/>
+        <Button layoutX="60.0" layoutY="47.0" mnemonicParsing="false" text="√" onAction="#onCommandRootClick"/>
+        <Button layoutX="26.0" layoutY="47.0" mnemonicParsing="false" text="x²" onAction="#onCommandSquareClick"/>
+        <Button layoutX="93.0" layoutY="83.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="23.0" text="9" onAction="#onCommand9Click"/>
+        <Button layoutX="93.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="23.0" text="/" onAction="#onCommandDivideClick"/>
+        <Button layoutX="26.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="23.0" text="4" onAction="#onCommand4Click"/>
+        <Button layoutX="60.0" layoutY="119.0" mnemonicParsing="false" text="5" onAction="#onCommand5Click"/>
+        <Button layoutX="93.0" layoutY="119.0" mnemonicParsing="false" text="6" onAction="#onCommand6Click"/>
+        <Button layoutX="26.0" layoutY="156.0" mnemonicParsing="false" text="1" onAction="#onCommand1Click"/>
+        <Button layoutX="60.0" layoutY="156.0" mnemonicParsing="false" text="2" onAction="#onCommand2Click"/>
+        <Button layoutX="93.0" layoutY="156.0" mnemonicParsing="false" text="3" onAction="#onCommand3Click"/>
+        <Button layoutX="23.0" layoutY="196.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="0" onAction="#onCommand0Click"/>
+        <Button layoutX="93.0" layoutY="196.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="23.0" text="," onAction="#onCommandZClick"/>
+        <Button layoutX="129.0" layoutY="83.0" mnemonicParsing="false" text="+" onAction="#onCommandPlusClick"/>
+        <Button layoutX="129.0" layoutY="47.0" mnemonicParsing="false" text="*" onAction="#onCommandMultipleClick"/>
+        <Button layoutX="128.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="-" onAction="#onCommandMinusClick"/>
+        <Button layoutX="128.0" layoutY="156.0" mnemonicParsing="false" text="=" onAction="#onHelloButtonClick"/>
+        <Button layoutX="128.0" layoutY="196.0" mnemonicParsing="false" text="C" onAction="#onCommandCClick"/>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
