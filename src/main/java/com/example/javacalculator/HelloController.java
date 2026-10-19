@@ -130,7 +130,6 @@ public class HelloController {
             double numb = 0;
 
             numb = Double.parseDouble(tex.getText());
-            accum = numb;
 
             tex.setText(String.valueOf(Math.pow(numb,2)));
             accum = Math.pow(numb,2);
@@ -166,7 +165,7 @@ public class HelloController {
             numb = Double.parseDouble(tex.getText());
 
             tex.setText(String.valueOf(Math.sqrt(numb)));
-            accum = Math.sqrt(Math.sqrt(numb));
+            accum = Math.sqrt((numb));
         }
 
     }
